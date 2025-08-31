@@ -2,41 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Time Tracker Design System - Glassmorphism Theme */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Core brand colors */
+    --background: 240 15% 9%;
+    --background-secondary: 240 12% 11%;
+    --foreground: 240 5% 96%;
+    
+    /* Glass surface colors */
+    --glass-primary: 240 100% 70%;
+    --glass-secondary: 260 100% 75%;
+    --glass-accent: 200 100% 70%;
+    
+    /* Surface colors with transparency */
+    --surface-glass: 240 5% 96% / 0.1;
+    --surface-card: 240 5% 96% / 0.05;
+    --surface-hover: 240 5% 96% / 0.15;
+    
+    /* Semantic tokens */
+    --card: 240 5% 96% / 0.08;
+    --card-foreground: 240 5% 96%;
+    
+    --popover: 240 5% 96% / 0.12;
+    --popover-foreground: 240 5% 96%;
+    
+    --primary: 240 100% 70%;
+    --primary-foreground: 240 15% 9%;
+    
+    --secondary: 260 100% 75%;
+    --secondary-foreground: 240 15% 9%;
+    
+    --muted: 240 5% 96% / 0.08;
+    --muted-foreground: 240 5% 70%;
+    
+    --accent: 200 100% 70%;
+    --accent-foreground: 240 15% 9%;
+    
+    --destructive: 0 80% 65%;
+    --destructive-foreground: 240 5% 96%;
+    
+    --border: 240 5% 96% / 0.2;
+    --input: 240 5% 96% / 0.1;
+    --ring: 240 100% 70%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(240 100% 70%) 0%, hsl(260 100% 75%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(260 100% 75%) 0%, hsl(200 100% 70%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(200 100% 70%) 0%, hsl(240 100% 70%) 100%);
+    
+    /* Shadows */
+    --shadow-glass: 0 8px 32px hsl(240 100% 70% / 0.2);
+    --shadow-glow: 0 0 40px hsl(240 100% 70% / 0.3);
+    
+    --radius: 16px;
 
     --sidebar-background: 0 0% 98%;
 
@@ -92,6 +113,77 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  .light {
+    /* Light mode glassmorphism */
+    --background: 240 20% 98%;
+    --background-secondary: 240 15% 96%;
+    --foreground: 240 15% 9%;
+    
+    --surface-glass: 240 15% 9% / 0.1;
+    --surface-card: 240 15% 9% / 0.05;
+    --surface-hover: 240 15% 9% / 0.15;
+    
+    --card: 240 15% 9% / 0.08;
+    --card-foreground: 240 15% 9%;
+    
+    --popover: 240 15% 9% / 0.12;
+    --popover-foreground: 240 15% 9%;
+    
+    --primary: 240 100% 70%;
+    --primary-foreground: 240 20% 98%;
+    
+    --secondary: 260 100% 75%;
+    --secondary-foreground: 240 20% 98%;
+    
+    --muted: 240 15% 9% / 0.08;
+    --muted-foreground: 240 15% 40%;
+    
+    --accent: 200 100% 70%;
+    --accent-foreground: 240 20% 98%;
+    
+    --destructive: 0 80% 65%;
+    --destructive-foreground: 240 20% 98%;
+    
+    --border: 240 15% 9% / 0.2;
+    --input: 240 15% 9% / 0.1;
+    --ring: 240 100% 70%;
+    
+    --sidebar-background: 240 20% 98%;
+    --sidebar-foreground: 240 15% 9%;
+    --sidebar-primary: 240 100% 70%;
+    --sidebar-primary-foreground: 240 20% 98%;
+    --sidebar-accent: 240 15% 9% / 0.08;
+    --sidebar-accent-foreground: 240 15% 9%;
+    --sidebar-border: 240 15% 9% / 0.2;
+    --sidebar-ring: 240 100% 70%;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-card border border-border rounded-2xl shadow-2xl;
+  }
+  
+  .glass-surface {
+    @apply backdrop-blur-md bg-surface-glass border border-border/50 rounded-xl;
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .shadow-glass {
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
 }
 
 @layer base {
@@ -100,6 +192,15 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  .dark {
+    color-scheme: dark;
+  }
+  
+  .light {
+    color-scheme: light;
   }
 }
