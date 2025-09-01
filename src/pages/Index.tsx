@@ -40,10 +40,6 @@ const Index = () => {
         {/* Hero Section */}
         <div className="text-center space-y-8 mb-16">
           <div className="space-y-4">
-            <div className="inline-flex items-center space-x-2 glass-surface px-4 py-2 rounded-full">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-sm text-muted-foreground">Production Ready Realcon Tracker</span>
-            </div>
             
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent font-playfair">
               Realcon Tracker
