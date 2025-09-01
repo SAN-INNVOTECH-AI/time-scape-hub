@@ -34,7 +34,7 @@ export default function Layout() {
                   <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
                     <MapPin className="h-5 w-5 text-white" />
                   </div>
-                  <span className="text-xl font-semibold">TimeTracker</span>
+                  <span className="text-xl font-semibold">Realcon Tracker</span>
                 </NavLink>
                 
                 {/* Desktop Navigation */}

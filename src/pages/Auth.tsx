@@ -90,7 +90,7 @@ export default function Auth() {
               <Clock className="w-8 h-8 text-white" />
             </div>
           </div>
-          <CardTitle className="text-2xl font-bold text-foreground">Time Tracker</CardTitle>
+          <CardTitle className="text-2xl font-bold text-foreground">Realcon Tracker</CardTitle>
           <CardDescription className="text-muted-foreground">
             Access your location tracking dashboard
           </CardDescription>

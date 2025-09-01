@@ -18,9 +18,10 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-			},
+		fontFamily: {
+			sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+			playfair: ['Playfair Display', 'serif'],
+		},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -73,11 +74,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-accent': 'var(--gradient-accent)',
-			},
+		backgroundImage: {
+			'gradient-primary': 'var(--gradient-primary)',
+			'gradient-secondary': 'var(--gradient-secondary)',
+			'gradient-accent': 'var(--gradient-accent)',
+			'gradient-premium': 'var(--gradient-premium)',
+		},
 			boxShadow: {
 				'glass': 'var(--shadow-glass)',
 				'glow': 'var(--shadow-glow)',
