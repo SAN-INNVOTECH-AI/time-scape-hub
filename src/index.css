@@ -12,10 +12,10 @@
     --background-secondary: 222 18% 12%;
     --foreground: 210 40% 96%;
     
-    /* Surfaces */
-    --surface-glass: 210 40% 96% / 0.05;
-    --surface-card: 210 40% 96% / 0.04;
-    --surface-hover: 210 40% 96% / 0.08;
+    /* Surfaces - Enhanced Glassmorphism */
+    --surface-glass: 210 40% 96% / 0.08;
+    --surface-card: 210 40% 96% / 0.06;
+    --surface-hover: 210 40% 96% / 0.12;
     
     /* Semantic tokens */
     --card: 222 18% 14% / 0.7;
@@ -24,7 +24,7 @@
     --popover: 222 18% 12% / 0.95;
     --popover-foreground: 210 40% 96%;
     
-    --primary: 224 90% 56%;
+    --primary: 260 80% 65%;
     --primary-foreground: 0 0% 100%;
     
     --secondary: 217 16% 26%;
@@ -33,7 +33,7 @@
     --muted: 210 40% 96% / 0.08;
     --muted-foreground: 210 18% 70%;
     
-    --accent: 200 95% 56%;
+    --accent: 180 90% 60%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
@@ -43,15 +43,15 @@
     --input: 210 40% 96% / 0.08;
     --ring: 224 90% 56%;
     
-    /* Subtle gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(224 90% 56% / 0.16), hsl(224 90% 56% / 0.08));
-    --gradient-secondary: linear-gradient(135deg, hsl(217 16% 26% / 0.24), hsl(217 16% 26% / 0.12));
-    --gradient-accent: linear-gradient(135deg, hsl(200 95% 56% / 0.16), hsl(200 95% 56% / 0.08));
-    --gradient-premium: linear-gradient(135deg, hsl(224 90% 56% / 0.12), hsl(200 95% 56% / 0.08));
+    /* Glassmorphism gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(260 80% 65% / 0.2), hsl(260 80% 65% / 0.1));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 16% 26% / 0.3), hsl(217 16% 26% / 0.15));
+    --gradient-accent: linear-gradient(135deg, hsl(180 90% 60% / 0.2), hsl(180 90% 60% / 0.1));
+    --gradient-premium: linear-gradient(135deg, hsl(260 80% 65% / 0.15), hsl(180 90% 60% / 0.1));
     
-    /* Subtle shadows */
-    --shadow-glass: 0 8px 24px hsl(0 0% 0% / 0.25);
-    --shadow-glow: 0 0 40px hsl(224 90% 56% / 0.15);
+    /* Glassmorphism shadows */
+    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.37), inset 0 1px 0 hsl(210 40% 96% / 0.15);
+    --shadow-glow: 0 0 48px hsl(260 80% 65% / 0.2);
     
     --radius: 14px;
   }
@@ -146,10 +146,13 @@
 @layer components {
   .glass-card {
     @apply backdrop-blur-xl bg-card border border-border rounded-2xl shadow-glass;
+    background: hsl(var(--card));
+    backdrop-filter: blur(20px) saturate(180%);
   }
   
   .glass-surface {
-    @apply backdrop-blur-md bg-surface-glass border border-border/50 rounded-xl;
+    @apply backdrop-blur-lg bg-surface-glass border border-border/30 rounded-xl;
+    backdrop-filter: blur(16px) saturate(160%);
   }
   
   .gradient-primary {
