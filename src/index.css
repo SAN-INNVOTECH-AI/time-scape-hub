@@ -24,7 +24,7 @@
     --popover: 222 18% 12% / 0.95;
     --popover-foreground: 210 40% 96%;
     
-    --primary: 260 80% 65%;
+    --primary: 210 85% 55%;
     --primary-foreground: 0 0% 100%;
     
     --secondary: 217 16% 26%;
@@ -33,7 +33,7 @@
     --muted: 210 40% 96% / 0.08;
     --muted-foreground: 210 18% 70%;
     
-    --accent: 180 90% 60%;
+    --accent: 195 95% 58%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
@@ -41,17 +41,17 @@
     
     --border: 210 40% 96% / 0.12;
     --input: 210 40% 96% / 0.08;
-    --ring: 224 90% 56%;
+    --ring: 210 85% 55%;
     
     /* Glassmorphism gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(260 80% 65% / 0.2), hsl(260 80% 65% / 0.1));
+    --gradient-primary: linear-gradient(135deg, hsl(210 85% 55% / 0.2), hsl(210 85% 55% / 0.1));
     --gradient-secondary: linear-gradient(135deg, hsl(217 16% 26% / 0.3), hsl(217 16% 26% / 0.15));
-    --gradient-accent: linear-gradient(135deg, hsl(180 90% 60% / 0.2), hsl(180 90% 60% / 0.1));
-    --gradient-premium: linear-gradient(135deg, hsl(260 80% 65% / 0.15), hsl(180 90% 60% / 0.1));
+    --gradient-accent: linear-gradient(135deg, hsl(195 95% 58% / 0.2), hsl(195 95% 58% / 0.1));
+    --gradient-premium: linear-gradient(135deg, hsl(210 85% 55% / 0.15), hsl(195 95% 58% / 0.1));
     
     /* Glassmorphism shadows */
     --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.37), inset 0 1px 0 hsl(210 40% 96% / 0.15);
-    --shadow-glow: 0 0 48px hsl(260 80% 65% / 0.2);
+    --shadow-glow: 0 0 48px hsl(210 85% 55% / 0.2);
     
     --radius: 14px;
   }
@@ -68,7 +68,7 @@
     --popover: 222 18% 12% / 0.95;
     --popover-foreground: 210 40% 96%;
 
-    --primary: 224 90% 56%;
+    --primary: 210 85% 55%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 217 16% 26%;
@@ -77,7 +77,7 @@
     --muted: 210 40% 96% / 0.08;
     --muted-foreground: 210 18% 70%;
 
-    --accent: 200 95% 56%;
+    --accent: 195 95% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -85,7 +85,7 @@
 
     --border: 210 40% 96% / 0.12;
     --input: 210 40% 96% / 0.08;
-    --ring: 224 90% 56%;
+    --ring: 210 85% 55%;
 
     --sidebar-background: var(--background);
     --sidebar-foreground: var(--foreground);
@@ -113,7 +113,7 @@
     --popover: 0 0% 100% / 0.95;
     --popover-foreground: 222 47% 11%;
     
-    --primary: 224 85% 44%;
+    --primary: 205 80% 45%;
     --primary-foreground: 0 0% 100%;
     
     --secondary: 210 16% 96%;
@@ -122,7 +122,7 @@
     --muted: 222 47% 11% / 0.06;
     --muted-foreground: 222 20% 40%;
     
-    --accent: 200 95% 46%;
+    --accent: 190 85% 48%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 72% 51%;
@@ -130,7 +130,7 @@
     
     --border: 222 20% 70% / 0.24;
     --input: 222 20% 70% / 0.18;
-    --ring: 224 85% 44%;
+    --ring: 210 85% 55%;
     
     --sidebar-background: var(--background);
     --sidebar-foreground: var(--foreground);
